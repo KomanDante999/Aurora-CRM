@@ -1,0 +1,76 @@
+
+.toollee {
+  z-index: 10000;
+}
+
+.toollee__content {
+  padding: 10px 20px;
+}
+
+.toollee__content_text {
+  text-align: center;
+}
+
+.toollee__content_html {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.toollee__content.toollee__theme_black {
+  background-color: black;
+  color: white;
+}
+
+.toollee__content.toollee__theme_white {
+  background-color: white;
+  color: black;
+}
+
+.toollee__content.toollee__theme_blue {
+  background-color: blue;
+  color: white;
+}
+
+.toollee__content.toollee__theme_violet {
+  background-color: hsla(256, 100%, 73%, 1);
+  color: white;
+}
+
+.toollee__content.toollee__theme_red1 {
+  background-color: hsla(11, 84%, 62%, 0.8);
+  color: white;
+}
+
+.toollee__arrow {
+  z-index: 10000;
+  font-size: 0;
+  line-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.toollee__arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+.toollee__arrow.toollee__theme_black {
+  color: black;
+}
+
+.toollee__arrow.toollee__theme_white {
+  color: white;
+}
+
+.toollee__arrow.toollee__theme_blue {
+  color: blue;
+}
+
+.toollee__arrow.toollee__theme_violet {
+  color: hsla(256, 100%, 73%, 1);
+}
+
+.toollee__arrow.toollee__theme_red1 {
+  color: hsla(11, 84%, 62%, 0.8);
+}

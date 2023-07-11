@@ -1,0 +1,75 @@
+
+.is-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  opacity: 0;
+}
+
+.choosse {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.choosse__btn-header {
+  width: 100%;
+  height: 100%;
+}
+
+.is-disable.choosse__btn-header {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.choosse__icon {
+  color: hsla(256, 100%, 73%, 1);
+  transition-property: transform;
+  transition-duration: 350ms;
+  transition-timing-function: ease;
+}
+
+.choosse__icon.is-open {
+  transform: rotateX(-180deg);
+}
+
+.choosse__title {
+}
+
+.choosse__list {
+  z-index: 1000;
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: -1px;
+  width: 100%;
+  margin-top: -1px;
+  /* margin-left: -1px;
+  margin-right: -2px; */
+}
+
+.choosse__item {
+}
+.choosse__btn-select {
+}
+.choosse__select-contant {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

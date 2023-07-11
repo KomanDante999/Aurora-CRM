@@ -1,0 +1,50 @@
+
+.load-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.load-animation__contant svg{
+  width: 100%;
+  height: 100%;
+}
+
+.load-animation__contant.animation--rotation {
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  /* transform-origin: 50% 50%; */
+}
+
+/*load-table*/
+.load-table__contant {
+  width: 200px;
+  height: 200px;
+  color: var(--color-firm);
+}
+
+/*change-client*/
+.change-client__contant {
+  width: 100px;
+  height: 100px;
+  color: var(--color-firm);
+}
+
+/*delete-client*/
+.delete-client__contant {
+  width: 100px;
+  height: 100px;
+  color: var(--color-firm);
+}
+
+
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

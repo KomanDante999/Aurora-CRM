@@ -1,0 +1,108 @@
+
+.drop-menu {
+  z-index: 201;
+  position: relative;
+}
+
+.drop-menu__btn-header {
+  z-index: 202;
+  width: 100%;
+  height: 100%;
+}
+
+.drop-menu__btn-header_lines {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drop-menu__btn-header_text {
+}
+
+.drop-menu__btn-header_text:focus:not(:active),
+.drop-menu__btn-header_text:hover:not(:active) {
+}
+
+.drop-menu__btn-header_text:active {
+}
+
+
+.drop-menu__title {
+}
+
+.drop-menu__title_lines {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 4px 0;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drop-menu__title_text {
+
+}
+
+.drop-menu__line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-grey);
+  transition-property: background-color, transform;
+  transition-duration: var(--duration-btn-animation);
+  transform-origin: right;
+}
+
+.drop-menu__btn-header_lines:focus .drop-menu__line,
+.drop-menu__btn-header_lines:hover .drop-menu__line {
+  background-color: var(--color-firm);
+}
+
+.drop-menu__line_1 {}
+
+.drop-menu__btn-header_lines:focus .drop-menu__line_2,
+.drop-menu__btn-header_lines:hover .drop-menu__line_2 {
+  transform: scaleX(0.8);
+}
+
+.drop-menu__btn-header_lines:focus .drop-menu__line_3,
+.drop-menu__btn-header_lines:hover .drop-menu__line_3 {
+  transform: scaleX(0.6);
+}
+
+.drop-menu__menu {
+  z-index: 200;
+  position: absolute;
+}
+
+.is-disable.drop-menu__menu {
+  display: none;
+}
+.drop-menu__list {
+}
+
+.drop-menu__menu.is-open {
+}
+
+.drop-menu__menu.is-close {
+}
+
+.drop-menu__item {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.drop-menu__item:not(:last-child) {
+}
+
+.drop-menu__btn-container {
+}
+
+.drop-menu__lable {
+}
+
+.is-disable.drop-menu__item .drop-menu__lable {
+  opacity: 0.5;
+}

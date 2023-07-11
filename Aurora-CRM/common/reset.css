@@ -1,0 +1,105 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+a {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+fieldset,
+select,
+input,
+option,
+textarea {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+legend {
+  display: table;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+li:focus,
+li:focus-within,
+li:focus-visible,
+a:focus,
+a:focus-within,
+a:focus-visible,
+button:focus,
+button:focus-within,
+button:focus-visible,
+input:focus,
+input:focus-within,
+input:focus-visible,
+label:focus,
+label:focus-within,
+label:focus-visible,
+textarea:focus,
+textarea:focus-within,
+textarea:focus-visible {
+  outline: none;
+}
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+input::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  text-align: inherit;
+}
+
+button:disabled {
+  background-color: inherit;
+  color: inherit;
+  border-color: inherit;
+}
+
+table {
+  border-spacing: 0;
+  border-color: transparent;
+}
+
+th {
+  font-weight: inherit;
+  text-align: inherit;
+}

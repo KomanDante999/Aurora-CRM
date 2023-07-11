@@ -1,0 +1,340 @@
+:root {
+  --duration-tr: 200ms:
+}
+
+
+.table {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px;
+  grid-auto-rows: 58px;
+  gap: 2px 0;
+  width: 100%;
+  line-height: 19px;
+  overflow-x: hidden;
+}
+
+.table__body {
+  display: contents;
+}
+
+.table__row {
+  width: 100%;
+  display: grid;
+  grid-template-columns:
+  minmax(62px, 0fr)
+  minmax(240px, 2.35fr)
+  minmax(145px, 1fr)
+  minmax(145px, 1fr)
+  minmax(108px, 0.9fr)
+  minmax(189px, 1fr)
+  ;
+  gap: 0 20px;
+  padding: 0 20px;
+}
+
+
+.table__cell {
+  width: 100%;
+  display: flex;
+}
+
+
+
+
+/* table header -------------------------*/
+
+.table__row_head {
+  padding-bottom: 5px;
+}
+
+.table__cell_head {
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  font-size: 12px;
+  color: var(--color-gray-text);
+}
+
+.sortable {
+  transition-property: color;
+  transition-duration: var(--duration-tr);
+}
+
+.sortable:focus .table__title-word,
+.sortable:hover .table__title-word{
+  color: var(--color-black);
+}
+
+.sortable:focus .table__icon-sort,
+.sortable:focus .table__icon-other,
+.sortable:hover .table__icon-sort,
+.sortable:hover .table__icon-other {
+  opacity: 1;
+}
+
+.table__icon-sort,
+.table__icon-other {
+  color: var(--color-firm);
+  opacity: 0.7;
+  transition-property: opacity, transform;
+  transition-duration: var(--duration-btn-animation);
+}
+
+.table__cell_head.is-sorted .table__title-word{
+  color: var(--color-firm);
+}
+
+.table__cell_head.is-sorted .table__icon-sort,
+.table__cell_head.is-sorted .table__icon-other {
+  opacity: 1;
+}
+
+.table__icon-sort.sort-up svg{
+  transform: rotate(180deg);
+}
+
+.table__title-word {
+  margin-right: 2px;
+}
+
+/* table body ------------------------------ */
+.table__body {}
+
+.table__row_body {
+  background-color: var(--color-white);
+  border: 1px solid transparent;
+  transition-property: border background-color;
+  transition-duration: var(--duration-btn-animation);
+}
+
+.table__row_body:focus {
+  border-color: var(--color-firm);
+  outline: none;
+}
+
+.table__row_body:hover {
+  background-color: var(--color-grey-bacground);
+}
+
+.table__cell_body {
+  align-items: center;
+  overflow: hidden;
+}
+
+/* contacts */
+.cell_contacts {
+
+}
+
+.cell-contact__list {
+  width: 108px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell-contact__item:not(:nth-child(5n)) {
+  margin-right: 7px;
+}
+
+.cell-contact__item:nth-child(-n+6) {
+  margin-bottom: 7px;
+}
+
+.cell-contact__link {
+  display: block;
+  width: 16px;
+  height: 16px;
+  color: var(--color-firm-07);
+  transition-property: color;
+  transition-duration: var(--duration-btn-animation);
+
+}
+
+.cell-contact__link:hover {
+  color: var(--color-firm);
+}
+
+.tooltip-contact {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.btn-unwrap {
+  width: 16px;
+  height: 16px;
+  padding-right: 2px;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 14px;
+  text-align: center;
+  color: var(--color-black);
+  border: 1px solid var(--color-firm-07);
+  border-radius: 50%;
+  transition-property: border-color;
+  transition-duration: var(--duration-btn-animation);
+}
+
+.btn-unwrap:hover {
+  border-color: var(--color-firm);
+}
+
+.unwrap-toollee__content {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+
+}
+
+
+
+.tooltip-contact__contant {
+
+}
+
+.tooltip-contact__wrap {
+  display: flex;
+}
+
+.tooltip-contact__type {
+  margin-right: 4px;
+  font-weight: 400;
+}
+
+.tooltip-contact__value {
+  font-weight: 700;
+  color: var(--color-firm-81);
+  text-decoration-line: underline;
+}
+
+/* active */
+.table__wrap-buttons {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.table__button {
+  display: flex;
+  flex-wrap: nowrap;
+  transition-property: color;
+  transition-duration: var(--duration-btn-animation);
+}
+
+.table__button-id {
+  flex-wrap: wrap;
+}
+
+.table__button-change {
+
+}
+
+.table__button-id:focus,
+.table__button-id:hover,
+.table__button-change:focus,
+.table__button-change:hover {
+  color: var(--color-firm);
+}
+
+.table__button-delete:focus,
+.table__button-delete:hover {
+  color: var(--color-red);
+}
+
+.table__button-icon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  transition-property: opacity;
+  transition-duration: var(--duration-btn-animation);
+}
+
+
+.table__button-icon_change {
+  color: var(--color-firm);
+}
+
+.table__button-icon_delete {
+  color: var(--color-red);
+}
+
+.table__button-icon_active {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  background-color: var(--color-grey-91);
+  transition-property: opacity;
+  transition-duration: var(--duration-btn-animation);
+}
+
+.table__button:active .table__button-icon_active {
+  opacity: 1;
+}
+
+.table__text-change {
+
+}
+
+.table__text-delete {
+
+}
+
+
+@media (max-width: 1210px) {
+  .table__row {
+    grid-template-columns:
+    minmax(62px, 0fr)
+    minmax(240px, 2.35fr)
+    minmax(120px, 0fr)
+    minmax(120px, 0fr)
+    minmax(108px, 0fr)
+    minmax(189px, 0fr)
+    ;
+  }
+
+  .table__cell_head {
+    flex-wrap: wrap;
+  }
+
+}
+
+
+@media (max-width: 1023px) {
+
+  .table__row {
+    grid-template-columns:
+    minmax(62px, 0fr)
+    minmax(202px, 2fr)
+    minmax(82px, 0fr)
+    minmax(82px, 0fr)
+    minmax(108px, 0fr)
+    minmax(85px, 0fr)
+    ;
+    gap: 0 16px;
+  }
+
+
+  .table__wrap-buttons {
+    flex-wrap: wrap;
+  }
+
+  .table__button-change {
+    padding-bottom: 5px;
+  }
+
+
+}
+
+@media (max-width: 767px) {
+  .table {
+    width: 727px;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 230px) {
+}

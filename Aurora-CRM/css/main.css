@@ -1,0 +1,125 @@
+/* common  */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  opacity: 0;
+}
+
+:root {
+  --pd-cont: 20px; /* padding container */
+  --pd-cont-input-form: 30px; /* padding container by input form*/
+
+  /* color palette */
+  --color-white: hsla(0, 0%, 100%, 1);
+  --color-black: hsla(0, 0%, 20%, 1);
+  --color-black-02: hsla(0, 0%, 20%, 0.2);
+  --color-grey-bacground: hsla(0, 0%, 90%, 1);
+  --color-grey-bacground-07: hsla(0, 0%, 90%, 0.7);
+  --color-grey: hsla(255, 12%, 80%, 1);
+  --color-grey-02: hsla(255, 12%, 80%, .2);
+  --color-grey-03: hsla(255, 12%, 80%, .3);
+  --color-grey-05: hsla(255, 12%, 80%, .5);
+  --color-grey-91: hsla(260, 13%, 91%, 1);
+  --color-grey-96: hsla(260, 14%, 96%, 1);
+
+
+  --color-grey02-border: hsla(0, 0%, 20%, 0.2);
+  --color-gray-text: hsla(0, 0%, 69%, 1);
+  --color-firm:hsla(256, 100%, 73%, 1);
+  --color-firm-07:hsla(256, 100%, 73%, 0.7);
+  --color-firm-81: hsla(256, 100%, 81%, 1);
+  --color-firm-84: hsl(256, 70%, 84%);
+  --color-firm-66: hsla(256, 100%, 66%, 1);
+  --color-red: hsla(11, 84%, 62%, 1);
+  --color-red-05: hsla(11, 84%, 62%, 0.5);
+  --color-green: hsla(135, 59%, 49%, 1);
+  ;
+
+  --duration-btn-animation: 300ms;
+  --animation-duration: 600ms;
+
+}
+
+.container {
+  min-width: 290px;
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: var(--pd-cont);
+  padding-left: var(--pd-cont);
+}
+
+/* button style */
+.btn {
+  position: relative;
+  transition-property: bacground-color color;
+  transition-timing-function: ease;
+  transition-duration: var(--duration-btn-animation);
+}
+
+.btn-primary {
+  color: var(--color-white);
+  background-color: var(--color-firm);
+}
+
+.btn-secondary {
+  border: 1px solid var(--color-firm);
+  color: var(--color-firm);
+}
+
+.btn-primary:focus:not(:active),
+.btn-primary:hover:not(:active),
+.btn-secondary:focus:not(:active),
+.btn-secondary:hover:not(:active) {
+  background-color: var(--color-firm-81);
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+  background-color: var(--color-firm-66);
+}
+
+.btn-secondary:focus,
+.btn-secondary:hover,
+.btn-secondary:active {
+  color: var(--color-white);
+}
+
+.is-disabled.btn-primary,
+.is-disabled.btn-secondary {
+  pointer-events: none;
+}
+
+.is-disabled.btn {
+  opacity: 0.5;
+}
+
+.is-disabled.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.aurora-crm {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: var(--color-black);
+  background-color: var(--color-grey-bacground);
+}
+
+
+
+
+
